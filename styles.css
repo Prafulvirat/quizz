@@ -1,0 +1,65 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#quiz-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#level {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#time {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  background-color:blue;
+  align:centre;
+}
+
+button.correct {
+    background-color: #4CAF50; /* Green for correct */
+    color: white;
+}
+
+button.incorrect {
+    background-color: #f44336; /* Red for incorrect */
+    color: white;
+}
+
+#answer-description {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#score {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+}
