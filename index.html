@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heritage Quiz App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 100px;
+            overflow-x: hidden;
+            transition: background-image 0.5s ease-in-out; /* Smooth transition between images */
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 52px;
+            color: #05acff; /* Golden color */
+            text-shadow: 3px 3px 5px black;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.8;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 40px;
+            margin-top: 30px;
+            background-color: #FF6347; /* Vibrant button color */
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 12px;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        a:hover {
+            background-color: #FF4500;
+            transform: translateY(-5px);
+        }
+
+        
+        
+
+        footer {
+            margin-top: 80px;
+            font-size: 16px;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        /* Additional graphical elements */
+        .graphic-container {
+            position: relative;
+        }
+
+        .graphic {
+            position: absolute;
+            width: 150px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.9;
+        }
+
+        .graphic-left {
+            left: 10px;
+        }
+
+        .graphic-right {
+            right: 10px;
+        }
+
+        .flag-graphic {
+            width: 80px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 18px;
+                max-width: 90%;
+            }
+
+            a {
+                font-size: 18px;
+                padding: 10px 30px;
+            }
+
+            .graphic {
+                width: 100px;
+            }
+
+            .flag-graphic {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img class="flag-graphic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPw99koXAjsn2Q0nytdl2eT6xCIADDD1y_Ag&s" alt="India Flag">
+        <h1>Explore the UnSeen Bharat</h1>
+        <p>Embark on a journey through India's rich culture with our interactive heritage quiz. Learn about India's history, traditions, and vibrant diversity. Start the Quiz and Explore!</p>
+        
+    </header>
+    
+
+    <div class="graphic-container">
+        <img class="graphic graphic-left" src="https://images.unsplash.com/photo-1586689185509-c7d65ef4d5a7" alt="">
+        <img class="graphic graphic-right" src="https://images.unsplash.com/photo-1530805939881-c899c5cdd32e" alt="">
+    </div>
+
+    <a href="hello.html" download>Start the Quiz</a>
+
+    <footer>
+
+        <p>©️ 2024 Heritage Quiz Event..</p>
+    </footer>
+
+    <script>
+        const images = [
+            'https://www.worldatlas.com/r/w1200/upload/ff/49/57/shutterstock-1509720656.jpg',
+            'https://media.cntraveller.in/wp-content/uploads/2018/10/GujaratTourism4.jpg',
+            'https://globalgrasshopper.com/wp-content/uploads/2011/01/Mumbai-India-scaled.jpg',
+            'http://3.bp.blogspot.com/_XrAGSoRWkbA/TOHw9S4A5nI/AAAAAAAAAAQ/qdOQ6BBu45c/s1600/Gate-way-of-India.jpg',
+            'https://e0.pxfuel.com/wallpapers/760/739/desktop-wallpaper-most-viewed-mysore-palace-bangalore-palace.jpg',
+            'https://globalgrasshopper.com/wp-content/uploads/2011/01/Gadi-Sagar.jpg','https://www.socwall.com/images/wallpapers/14843-1280x800.jpg'
+        ];
+
+        let currentImageIndex = 0;
+const changeBackgroundImage = () => {
+    document.body.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    currentImageIndex = (currentImageIndex + 1) % images.length; // Loop through images
+};
+
+
+        setInterval(changeBackgroundImage, 10000); // Change background every 5 seconds
+    </script>
+
+</body>
+</html>
